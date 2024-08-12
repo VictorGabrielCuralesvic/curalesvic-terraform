@@ -28,12 +28,12 @@ resource "aws_iam_role_policy" "read_policy" {
 
 resource "aws_iam_role" "registerRole" {
   name = "registerPersonRole"
-  assume_role_policy = file("./registerRole/assume_write_role_policy.json")
+  assume_role_policy = file("./registerRole/assume_write_role.json")
 }
 
 resource "aws_iam_role" "getRole" {
   name = "getPersonRole"
-  assume_role_policy = file("./getRole/assume_read_role_policy.json")
+  assume_role_policy = file("./getRole/assume_read_policy.json")
 }
 
 resource "aws_lambda_function" "registerLambda" {
